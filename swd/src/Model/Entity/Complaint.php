@@ -4,16 +4,16 @@ namespace App\Model\Entity;
 use Cake\ORM\Entity;
 
 /**
- * User Entity
+ * Complaint Entity
  *
  * @property int $id
- * @property string $name
- * @property int $age
- * @property \Cake\I18n\FrozenDate $birth
- * @property string $password
- * @property string $cpf
+ * @property int $id_user
+ * @property string $neighborhood
+ * @property string $street
+ * @property int $numb
+ * @property string $description_complaint
  */
-class User extends Entity
+class Complaint extends Entity
 {
 
     /**
@@ -26,19 +26,10 @@ class User extends Entity
      * @var array
      */
     protected $_accessible = [
-        'name' => true,
-        'age' => true,
-        'birth' => true,
-        'password' => true,
-        'cpf' => true
-    ];
-
-    /**
-     * Fields that are excluded from JSON versions of the entity.
-     *
-     * @var array
-     */
-    protected $_hidden = [
-        'password'
+        'id_user' => true,
+        'neighborhood' => true,
+        'street' => true,
+        'numb' => true,
+        'description_complaint' => true
     ];
 }

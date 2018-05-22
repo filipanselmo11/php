@@ -17,9 +17,9 @@
         <?php
             echo $this->Form->control('name');
             echo $this->Form->control('age');
+            echo $this->Form->control('birth', ['empty' => true]);
+            echo $this->Form->control('password');
             echo $this->Form->control('cpf');
-            echo $this->Form->control('passwd');
-            echo $this->Form->control('confirm passwd', ['type' => 'password']);
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

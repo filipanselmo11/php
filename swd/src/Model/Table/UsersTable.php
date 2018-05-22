@@ -59,26 +59,20 @@ class UsersTable extends Table
             ->notEmpty('age');
 
         $validator
+            ->date('birth')
+            ->allowEmpty('birth');
+
+        $validator
+            ->scalar('password')
+            ->maxLength('password', 255)
+            ->requirePresence('password', 'create')
+            ->notEmpty('password');
+
+        $validator
             ->scalar('cpf')
             ->maxLength('cpf', 255)
             ->requirePresence('cpf', 'create')
             ->notEmpty('cpf');
-
-        $validator
-            ->scalar('passwd')
-            ->maxLength('passwd', 255)
-            ->requirePresence('passwd', 'create')
-            ->notEmpty('passwd');
-
-        $validator
-            ->add(
-                'confirm_passwd',
-                'compareWith',[
-                    'rule' => ['compareWith', 'passwd'],
-                    'message' => 'Password not equal',
-                ]
-            );
-
 
         return $validator;
     }

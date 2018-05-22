@@ -21,12 +21,12 @@
             <td><?= h($user->name) ?></td>
         </tr>
         <tr>
-            <th scope="row"><?= __('Cpf') ?></th>
-            <td><?= h($user->cpf) ?></td>
+            <th scope="row"><?= __('Password') ?></th>
+            <td><?= h($user->password) ?></td>
         </tr>
         <tr>
-            <th scope="row"><?= __('Passwd') ?></th>
-            <td><?= h($user->passwd) ?></td>
+            <th scope="row"><?= __('Cpf') ?></th>
+            <td><?= h($user->cpf) ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('Id') ?></th>
@@ -35,6 +35,10 @@
         <tr>
             <th scope="row"><?= __('Age') ?></th>
             <td><?= $this->Number->format($user->age) ?></td>
+        </tr>
+        <tr>
+            <th scope="row"><?= __('Birth') ?></th>
+            <td><?= h($user->birth) ?></td>
         </tr>
     </table>
 </div>

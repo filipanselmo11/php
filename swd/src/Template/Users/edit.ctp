@@ -23,8 +23,9 @@
         <?php
             echo $this->Form->control('name');
             echo $this->Form->control('age');
+            echo $this->Form->control('birth', ['empty' => true]);
+            echo $this->Form->control('password');
             echo $this->Form->control('cpf');
-            echo $this->Form->control('passwd');
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>
